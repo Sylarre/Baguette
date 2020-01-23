@@ -1,6 +1,5 @@
 body {
-  background: #fafafa;
-  color: #333333;
+background-image: url(https://subtlepatterns.com/patterns/kindajean.png);
   margin-top: 5rem;
 }
 
@@ -13,7 +12,7 @@ ul {
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-color: #aa1226;
 }
 
 .site-header .navbar-nav .nav-link {
