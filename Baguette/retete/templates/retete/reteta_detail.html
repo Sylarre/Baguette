@@ -1,0 +1,20 @@
+{% extends "retete/base.html"%}
+{% block continut%}
+    <article class="media content-section">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ object.autor }}</a>
+                <small class="text-muted">{{ object.data_adaugare|date:"F d, Y" }}</small>
+                {% if object.autor == user%}
+                    <div>
+                        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'reteta-update' object.id %}">Actualizare</a>
+                        <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'reteta-delete' object.id %}">Stergere</a>
+                    </div>
+                {% endif %}
+            </div>
+            <h2 class="article-title">{{ object.titlu }}</h2>
+            <p class="article-content">{{ object.timp_executie }}</p>
+            <p class="article-content">{{ object.continut }}</p>
+        </div>
+    </article>
+{% endblock continut %}

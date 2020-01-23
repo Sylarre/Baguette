@@ -1,0 +1,16 @@
+{% extends "retete/base.html"%}
+
+{% block continut%}
+    {% for reteta in retete %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ reteta.autor }}</a>
+              <small class="text-muted">{{ reteta.data_adaugare|date:"F d, Y" }}</small>
+            </div>
+            <h2><a class="article-title" href="{% url 'reteta-detail' reteta.id %}">{{ reteta.titlu }}</a></h2>
+            <p class="article-content">{{ reteta.continut }}</p>
+          </div>
+        </article>
+    {% endfor %}
+{% endblock continut %}
